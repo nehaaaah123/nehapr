@@ -1,0 +1,353 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Main container styling */
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Text section styling */
+.text-section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 30vh;
+}
+
+.main-title {
+  font-size: 5rem;
+  font-weight: lighter;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  align-items: center;
+}
+
+.sub-title {
+  font-size: 3.25rem;
+  font-weight: bold;
+  color: mediumslateblue;
+  padding-right: 150px;
+  line-height: 1;
+}
+
+.highlight {
+  font-family: 'serif';
+  color: white;
+  font-size: medium;
+  margin: 0;
+  margin-right: 188px;
+  line-height: 1;
+}
+
+/* Container for intro text and logos */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.intro {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 214px;
+  text-align: left;
+  position: relative;
+}
+
+/* Container for footer links */
+.footer-links {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-top: 40px;
+}
+
+.footer-link {
+  display: inline-block;
+  margin: 0 8px; /* Space between logos */
+}
+
+.footer-logo {
+  width: 40px;
+  height: auto;
+}
+
+/* Image section styling */
+.image-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  margin-bottom: 155px;
+  margin-right: 60px;
+}
+
+.image-section img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px double mediumslateblue;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .text-section {
+    margin-bottom: 15vh;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .sub-title {
+    font-size: 1.625rem;
+    padding-right: 0;
+  }
+
+  .highlight {
+    font-size: small;
+    margin-right: 0;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Space between paragraph and logos */
+    position: relative;
+  }
+
+  .footer-link {
+    margin: 10px 0; /* Space between logos vertically */
+  }
+
+  .footer-logo {
+    width: 150px; /* Increased size for better visibility */
+    height: auto;
+  }
+
+  .image-section {
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+
+  .image-section img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .text-section {
+    margin-bottom: 20vh;
+  }
+
+  .main-title {
+    font-size: 3.75rem;
+  }
+
+  .sub-title {
+    font-size: 2.25rem;
+    padding-right: 0;
+  }
+
+  .highlight {
+    font-size: medium;
+    margin-right: 0;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .footer-link {
+    margin: 10px 0;
+  }
+
+  .footer-logo {
+    width: 100px; /* Keep original size for medium devices */
+    height: auto;
+  }
+
+  .image-section {
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin-right: 0;
+  }
+
+  .image-section img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .text-section {
+    margin-bottom: 25vh;
+  }
+
+  .main-title {
+    font-size: 4.5rem;
+  }
+
+  .sub-title {
+    font-size: 2.75rem;
+    padding-right: 0;
+  }
+
+  .highlight {
+    font-size: medium;
+    margin-right: 0;
+  }
+
+  .intro-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .intro {
+    padding-left: 20px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-link {
+    margin: 0 10px;
+  }
+
+  .footer-logo {
+    width: 250px; /* Maintain size for large devices */
+    height: auto;
+  }
+
+  .image-section {
+    justify-content: center;
+    margin-bottom: 4rem;
+    margin-right: 0;
+  }
+
+  .image-section img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* Extra Small devices (portrait phones, 400px and below) */
+@media (max-width: 400px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .text-section {
+    margin-bottom: 10vh;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .sub-title {
+    font-size: 1.25rem;
+    padding-right: 0;
+  }
+
+  .highlight {
+    font-size: small;
+    margin-right: 0;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction:row;
+    margin-top: 20px;
+    position: static; /* Ensure it stays in normal flow */
+  }
+
+  .footer-link {
+    margin: 8px 0; /* Adjust space between logos vertically */
+  }
+
+  .footer-logo {
+    width: 40px; /* Adjust size for small devices */
+    height: auto;
+  }
+
+  .image-section {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+
+  .image-section img {
+    width: 200px;
+    height: 200px;
+  }
+}

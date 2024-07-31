@@ -1,0 +1,263 @@
+/* Base styles */
+.main2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    padding: 2rem;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.heading {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 6rem;
+}
+
+.heading2 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: mediumslateblue;
+    margin-left: 0.5rem;
+}
+
+.heading3 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: mediumslateblue;
+    margin-left: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.grid-container, .info-boxes {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+}
+
+.text-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.para {
+    font-size: 1.025rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.info-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.box {
+    background-color: black;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 1rem;
+    color: dimgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textc {
+    color: mediumslateblue;
+    font-size: 2.75rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.s2 {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: 600;
+    padding: 3px;
+    align-self: flex-end;
+}
+
+/* Container for the boxes */
+.info-boxes2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes per line */
+    gap: 4rem; /* Space between boxes */
+    width: 90%; /* Ensure it takes up full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.box2 {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust the size as needed */
+    overflow: hidden;
+    border: 4px solid dimgray; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black; /* Background color */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.box2 img{
+    max-width: 80%; /* Limit the width of the video */
+    max-height: 80%; /* Limit the height of the video */
+    object-fit: contain; /* Adjust the video to fit within the box */
+    transition: opacity 0.3s ease;
+}
+
+
+.box2 .alt-text {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.box2:hover img {
+    opacity: 0.3; /* Adjust opacity to show the text */
+}
+.box2:hover .alt-text {
+    opacity: 2; /* Show the text on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .info-boxes2 {
+        grid-template-columns: repeat(2, 1fr); /* 2 boxes per line on medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .info-boxes2 {
+        grid-template-columns: 1fr; /* 1 box per line on small screens */
+    }
+}
+
+.content2 {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.heading4{
+    font-size: 2.5rem;
+    font-weight:500;
+    color: white;
+    margin-left: 0.5rem;
+    margin-bottom: 6rem;
+}
+
+.head{
+    display: flex;
+    align-items:start;
+    justify-content:flex-start;
+    font-size:1.25rem;
+    padding: 15px;
+    font-weight: bold;
+    color:whitesmoke;
+    margin-right: 1rem;
+    text-decoration:underline;
+  text-decoration-color:aliceblue; /* Change underline color */
+  text-decoration-style:solid;
+  
+}
+
+.ed{
+    margin-bottom: 4rem;
+}
+.exp{
+    color: mediumslateblue;
+    padding: 2px;
+    margin-left: 1rem;
+}
+.parag{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.grid-container2 {
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(2, auto);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .heading, .heading2, .heading3 {
+        font-size: 3rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-boxes, .info-boxes2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .box {
+        font-size: 0.875rem;
+        min-height: 100px;
+    }
+   
+    .box2 {
+        flex: 1 1 calc(50% - 1rem);
+        min-height: 120px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .heading, .heading2, .heading3 {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .box {
+        font-size: 0.75rem;
+        min-height: 80px;
+    }
+    .box2 {
+        flex: 1 1 calc(100% - 1rem); /* One item per row */
+        min-height: 100px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 375px) {
+    .heading, .heading2, .heading3 {
+        font-size: 2rem;
+    }
+
+    .box, .box2 {
+        font-size: 0.65rem;
+        min-height: 60px;
+    }
+}
